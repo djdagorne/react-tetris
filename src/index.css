@@ -7,3 +7,13 @@ body {
   src: url('font/Pixel-LCD-7.woff') format('woff');
 }
 
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+  background: black;
+  font-family: Pixel, Arial, Helvetica, sans-serif;
+  margin: 50px 0 20px 0;
+  padding: 0;
+}

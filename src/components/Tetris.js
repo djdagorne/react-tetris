@@ -24,8 +24,6 @@ const Tetris = () => {
   const [stage, setStage, rowsCleared] = useStage(player, resetPlayer);
   const [score, setScore, rows, setRows, level, setLevel] = useGameStatus(rowsCleared);
 
-  console.log('re-render');
-
   const movePlayer = dir => {
     //Takes care of left/right movement
     //if we aren't colliding, update pos
@@ -56,7 +54,6 @@ const Tetris = () => {
       updatePlayerPos({x: 0, y: 1, collided: false})
     } else {
       if(player.pos.y < 1) {
-        console.log('Game Over!');
         setGameOver(true);
         setDropTime(null);
       }
@@ -105,6 +102,7 @@ const Tetris = () => {
       onKeyDown={e => move(e)} 
       onKeyUp={keyUp}
     >
+      <h1>Reactris</h1>
       <StyledTetris>
       <Stage stage={stage}/>
       <aside>
